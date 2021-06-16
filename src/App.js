@@ -22,7 +22,7 @@ class App extends Component{
   handleSubmit = async (e)=>{
     e.preventDefault();
     const city = e.target.elements.city.value;
-    const API_Link = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_Key}`);
+    const API_Link = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_Key}`);
     const toJSON = await API_Link.json();
      console.log(toJSON); // => get all info about the weather of your selected city 
     if( city )
